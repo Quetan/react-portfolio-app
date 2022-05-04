@@ -1,0 +1,12 @@
+.page-number {
+    font-size: 10rem;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    line-height: 1;
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+    font-weight: 900;
+    font-family: var(--heading-font);
+    color: var(--accent-color--opacity);
+}
