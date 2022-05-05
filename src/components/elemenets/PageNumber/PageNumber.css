@@ -4,8 +4,8 @@
     transform: rotate(180deg);
     line-height: 1;
     position: absolute;
-    right: 0;
-    bottom: 10%;
+    right: -25px;
+    bottom: 5%;
     font-weight: 900;
     font-family: var(--heading-font);
     color: var(--accent-color--opacity);

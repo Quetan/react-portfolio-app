@@ -1,0 +1,13 @@
+button.backButton {
+    position: absolute;
+    left: max(1vw, 15px);
+    top: max(2vh, 15px);
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+
+button.backButton svg{
+    fill: var(--heading-color);
+}

@@ -1,9 +1,11 @@
-import React from 'react';
-import Loader from './Loader/Loader';
-
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Main from './Sections/Main/Main'
+import Button from './elemenets/Button/Button'
+import Loader from "./elemenets/Loader/Loader"
 export default function UI() {
 	return (
-		<div>
+		<section>
 			<h1>Заголовок 1</h1>
 			<h2>Заголовок 2</h2>
 			<h3>Заголовок 3</h3>
@@ -23,28 +25,19 @@ export default function UI() {
 				предупреждал парадигматическая маленькая?
 			</p>
 			<h2>Buttons</h2>
-			<button className="btn" type="button">
-				Кнопка sm
-			</button>{' '}
+			<Button buttonValue="Кнопка SM"/>
 			<br />
-			<button className="btn btn-md" type="button">
-				Кнопка md
-			</button>{' '}
+			<Button buttonValue="Кнопка MD" buttonModifier="btn-md"/>
 			<br />
-			<button className="btn btn-lg" type="button">
-				Кнопка lg
-			</button>{' '}
+			<Button buttonValue="Кнопка LG" buttonModifier="btn-lg"/>
 			<br />
-			<button className="btn" type="button" disabled>
-				Кнопка disabled
-			</button>{' '}
+			<Button buttonValue="Кнопка DISABLED" buttonModifier="btn-md" isButtonDisabled={true}/>
 			<br />
-			<button className="btn btn-md btn-success" type="button">
-				Кнопка success
-			</button>{' '}
+			<Button buttonValue="Кнопка SUCCESS" buttonModifier="btn-success"/>
 			<br />
 			<h2>Link</h2>
 			<a href="https://youtube.com">Ссылка</a>
+			<Link to="/">Main</Link>
 			<h2>Unordered list</h2>
 			<ul>
 				<li> Lorem, ipsum dolor. </li>
@@ -64,6 +57,6 @@ export default function UI() {
 				<li>Lorem, ipsum dolor.</li>
 			</ol>
 			<Loader />
-		</div>
+		</section>
 	);
 }

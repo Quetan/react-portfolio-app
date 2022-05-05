@@ -1,41 +1,99 @@
-.about-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+section.about-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .about-title {
-    font-size: 5rem;
-    margin: 0;
-    text-align: right;
-    width: 35%;
-    text-transform: uppercase;
-    align-self: center;
+  font-size: 7rem;
+  line-height: 1;
+  margin: 0;
+  text-align: right;
+  text-transform: uppercase;
+  align-self: center;
+  letter-spacing: 0.02em;
 }
 
 .about-content {
-    width: 55%;
-    position: relative;
+  position: relative;
+  padding-left: 100px;
+  line-height: 1.8;
+  font-size: 22px;
 }
 
 .about-content::before {
-    content: '';
-    width: 10px;
-    height: 100%;
-    display: block;
-    position: absolute;
-    background-color: var(--accent-color);
-    left: -10%;
+  content: "";
+  width: 8px;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-color: var(--accent-color);
+  left: 46px;
+  border-radius: 3px;
 }
 
 .about-content p {
-    margin-bottom: 0.66rem;
+  margin-bottom: 1rem;
 }
 
 .about-content p:last-child {
-    margin: 0;
+  margin: 0;
 }
+@media (min-width: 1922.98px) {
+  .about-title {
+    font-size: 9rem;
+  }
+  .about-content {
+      font-size: 28px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .about-title {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .about-title {
+    font-size: 5rem;
+  }
+  .about-content {
+    font-size: 18px;
+    line-height: 1.7;
+    padding-left: 60px;
+  }
+  .about-content::before {
+    width: 4px;
+    left: 27px;
+  }
+}
+@media (max-width: 767.98px) {
+  section.about-section {
+    flex-direction: column;
+  }
+  .about-title {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
 
-.about-button {
-    float: right;
+  .about-title br {
+    display: none;
+  }
+  .about-content {
+    padding-left: 12px;
+  }
+  .about-content::before {
+    left: 0px;
+    width: 3px;
+  }
+}
+@media (max-width: 575.98px) {
+  .about-title {
+    font-size: 3.5rem;
+  }
+  .about-content {
+    font-size: 16px;
+    line-height: 1.6;
+  }
 }

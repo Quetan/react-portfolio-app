@@ -5,12 +5,12 @@
 	--text-font: 'Source Serif Pro', serif;
 	--background-color: #fffefc;
 	--heading-color: #02373f;
-	--text-color: #001b1f;
+	--text-color: #364159;
 	--accent-color: #f7ae74;
 	--accent-color--opacity: rgba(247, 174, 116,0.35);
 	--success-color: #4ecdc4;
  	--warning-color: #FFE66D;
- 	--danger-color: var(--accent-color);
+ 	--danger-color: #9e4141;
 	--disabled-color: #adadad;
 }
 
@@ -24,6 +24,7 @@
 
 html {
 	background-color: var(--background-color);
+	scroll-behavior: smooth;
 }
 
 body {
@@ -35,6 +36,50 @@ body {
 	overscroll-behavior: none;
 	width: 100%;
 }
+
+.App {
+	position: relative;
+}
+
+/* SECTIONS */
+
+section, header, footer {
+	padding: 0 15px;
+  }
+  
+  @media (min-width: 575.98px){
+	section, header, footer {
+	  padding: 0 calc(50vw - 270px);
+	}
+  }
+  
+  @media (min-width: 767.98px){
+	section, header, footer {
+	  padding: 0 calc(50vw - 360px);
+	}
+  }
+  
+  @media (min-width: 991.98px) {
+	section, header, footer {
+	  padding: 0 calc(50vw - 480px);
+	}
+  }
+  
+  @media (min-width: 1199.98px){
+	section, header, footer {
+	  padding: 0 calc(50vw - 590px);
+	}
+  }
+
+.section {
+	min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+	padding-top: 20vh;
+	padding-bottom: calc(20vh + 5rem);
+}
+
+
 
 /* TEXT */
 
@@ -79,13 +124,6 @@ b {
 	font-weight: 500;
 }
 
-section.section {
-	min-height: 30vh;
-    position: relative;
-    padding: 30px 5%;
-    padding-right: 10rem;
-    overflow: hidden;
-}
 
 /* LINK */
 
