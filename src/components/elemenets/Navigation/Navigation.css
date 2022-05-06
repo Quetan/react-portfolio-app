@@ -1,0 +1,84 @@
+.App-Navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 25vw;
+  align-self: flex-start;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-image: linear-gradient(
+    to right top,
+    var(--dark-color),
+    transparent
+  );
+  transition: all 0.4s ease;
+  z-index: 2;
+  box-shadow: 1vw 0 300px 5vw var(--dark-color),
+              1vw 0 300px 5vw var(--purple-color);
+}
+
+.App-Navigation.closed {
+  right: -25vw;
+  box-shadow: none;
+}
+
+.navigation-button {
+  position: absolute;
+  left: -3em;
+  height: 2em;
+  width: 2em;
+  margin-left: -5px;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+  z-index: 10;
+  font-size: 1.2rem;
+  border-radius: 100%;
+  aspect-ratio: 1;
+}
+
+.navigation-button svg {
+    transition: fill .4s ease-in-out;
+}
+
+.App-Navigation.open .navigation-button svg {
+    fill: #fff;
+}
+
+
+.navigation-list {
+    padding-inline-start: 0;
+    list-style-type: none;
+}
+
+.navigation-item {
+    margin-bottom: 1rem;
+}
+
+.navigation-item:last-child {
+    margin-bottom: 0;
+}
+
+.navigation-item.active > .navigation-link::after {
+    width: 100%;
+}
+
+.navigation-link {
+    font-size: 2rem;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: var(--heading-font);
+}
+
+
+@media (max-width: 767.98px) {
+    .App-Navigation {
+        width: 100vw;
+    }
+    .App-Navigation.closed{
+        right: -100vw;
+    }
+}

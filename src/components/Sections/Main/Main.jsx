@@ -4,13 +4,14 @@ import "./Main.css";
 import Navigation from "../../elemenets/Navigation/Navigation";
 import { motion } from 'framer-motion';
 
-export default function Main() {
+export default function Main(props) {
+
   return (
-    <motion.header className="section"   
-    initial={{ opacity: 0, scale: 0.75 }}
-    animate={{ opacity: 1, scale: 1 }}
-    exit={{ opacity: 0, scale: 0 }}
-    transition={{duration: 0.7, delay: 0.2 }}
+    <motion.header className="section" 
+      variants={props.variants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
     >
       {/* <div className="header-image-wrapper">
         <div className="header-circle">
@@ -25,7 +26,6 @@ export default function Main() {
         </h1>
         <span className="header-subtitle">FrontEnd Developer</span>
       </div> */}
-      <Navigation />
     </motion.header>
   );
 }

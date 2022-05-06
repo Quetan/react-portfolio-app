@@ -34,7 +34,7 @@ button.btn:disabled {
 
 button.btn:hover {
 	transform: translateY(1px);
-	border-bottom-color: var(--heading-color);
+	border-bottom-color: var(--purple-color);
 }
 
 button.btn-success {

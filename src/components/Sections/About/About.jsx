@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./About.css";
 
 import PageNumber from "../../elemenets/PageNumber/PageNumber";
@@ -7,16 +7,19 @@ import Button from "../../elemenets/Button/Button";
 import { motion } from "framer-motion";
 
 export default function About(props) {
-  let clickHandler = () => {};
+
+  useEffect(() => {
+    props.setActiveSection("about");
+  }, [props.activeSection]);
+  
 
   return (
-    <motion.section
-      id="about"
-      className="section about-section"
-      initial={{ opacity: 0, scale: 0.75 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0 }}
-      transition={{duration: 0.7, delay: 0.2 }}
+    <motion.div 
+      className="about-section"
+      variants={props.variants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
     >
       <PageNumber number={props.pageNumber} />
       <h2 className="about-title">
@@ -33,8 +36,13 @@ export default function About(props) {
           ручеек всеми имени. Запятых бросил предупредила текстов моей ее прямо
           раз диких своих ручеек журчит!
         </p>
-        {/* <Button className="about-button" isButtonDisabled={false} buttonClickHandler={clickHandler} buttonModifier="btn-md" buttonValue="К портфолио"/> */}
+        <Button
+          className="about-button"
+          isButtonDisabled={false}
+          buttonModifier="btn-md"
+          buttonValue="К портфолио"
+        />
       </div>
-    </motion.section>
+    </motion.div>
   );
 }

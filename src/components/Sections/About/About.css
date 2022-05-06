@@ -1,4 +1,4 @@
-section.about-section {
+.about-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
